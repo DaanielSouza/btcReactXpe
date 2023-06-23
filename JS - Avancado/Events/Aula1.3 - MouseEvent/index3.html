@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .selecionadas{
+      background-color: green;
+      color: white;
+    }
+    ul {
+      list-style: none;
+    }
+    li {
+      cursor: pointer;
+      border: 1px solid black;
+      padding: 10px;
+      width: 5%;
+      margin: auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <ul id="ul">
+    <li>Teste</li>
+    <li>Teste</li>
+    <li>Teste</li>
+    <li>Teste</li>
+  </ul>
+</body>
+<script>
+  document.getElementById('ul').addEventListener('click', (e)=>{
+    if(e.target.tagName != 'LI')
+      return
+    if(event.ctrlKey || event.metaKey)
+      toggleSelect(event.target);
+    else
+      singleSelect(event.target);
+  })
+
+  singleSelect = (li) => {
+    let selected = document.getElementById('ul').querySelectorAll('.selecionadas');
+
+    for(let elem of selected)
+      elem.classList.remove('selecionadas');
+
+    li.classList.add('selecionadas');
+  }
+
+  toggleSelect= (li) => {
+    li.classList.toggle("selecionadas");
+  }
+</script>
+</html>

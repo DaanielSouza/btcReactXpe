@@ -1,3 +1,3 @@
-#BOTCAMP XPE REACT
+# BOOTCAMP XPE REACT
 
-##Arquivo para salvar conteúdo dos exercícios do bootcamp de React da XPE.
+## Arquivo para salvar conteúdo dos exercícios do bootcamp de React da XPE.

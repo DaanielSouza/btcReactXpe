@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Exemplo de propriedades de eventos
+  <button type="button">Clique</button>
+</body>
+<script>
+  document.querySelector('button').addEventListener('click', (e)=>{
+    alert(`Posicao x: ${e.screenX} | Posicao y: ${e.screenY}`);
+  },false)
+</script>
+</html>
