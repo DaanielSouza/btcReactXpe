@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document - Capture</title>
+</head>
+<body>
+  <div>
+    <p>
+      <a href="">Clique</a>
+    </p>
+  </div>
+</body>
+<script>
+  let elementos = document.querySelectorAll("div, p, a");
+  for(let e of elementos){
+    e.addEventListener("click", this.showTagName ,true)
+  }
+
+  function showTagName(){
+    alert("Capture: " + this.tagName);
+  }
+</script>
+</html>
